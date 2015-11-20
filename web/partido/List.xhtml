@@ -45,43 +45,43 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_central}"/>
                             </f:facet>
-                            <h:outputText value="#{item.central}"/>
+                            <h:outputText value="#{item.central.toString()}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_juez1}"/>
                             </f:facet>
-                            <h:outputText value="#{item.juez1}"/>
+                            <h:outputText value="#{item.juez1.toString()}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_juez2}"/>
                             </f:facet>
-                            <h:outputText value="#{item.juez2}"/>
+                            <h:outputText value="#{item.juez2.toString()}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_juez3}"/>
                             </f:facet>
-                            <h:outputText value="#{item.juez3}"/>
+                            <h:outputText value="#{item.juez3.toString()}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_idCancha}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idCancha}"/>
+                            <h:outputText value="#{item.idCancha.nombre}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_local}"/>
                             </f:facet>
-                            <h:outputText value="#{item.local}"/>
+                            <h:outputText value="#{item.local.nombre}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListPartidoTitle_visitante}"/>
                             </f:facet>
-                            <h:outputText value="#{item.visitante}"/>
+                            <h:outputText value="#{item.visitante.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{partidoController.prepareCreate}" update=":PartidoCreateForm" oncomplete="PF('PartidoCreateDialog').show()"/>

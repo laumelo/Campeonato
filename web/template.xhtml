@@ -18,7 +18,7 @@
         <p:layout fullPage="true">
             
             <p:layoutUnit position="north" size="220" header="#{bundle.AppName}">
-            <p:graphicImage value="img/estadio/imagen.jpg" style="margin-left: 270px" width="647" height="140"/>
+            <p:graphicImage value="../../img/estadio/imagen.jpg" style="margin-left: 250px" width="900" height="140"/>
             <h:form id="menuForm">
             <p:megaMenu  style="margin-top:20px">
             <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
@@ -38,6 +38,7 @@
                 <p:submenu>  
                     <p:menuitem value="Equipos" outcome="/equipo/List"/>
                     <p:menuitem value="Jugadores" outcome="/jugador/List"/>
+                    <p:menuitem value="Equipos - Jugadores" outcome="/equipoJugador/List"/>
                 </p:submenu>  
                 </p:column>
             </p:submenu>

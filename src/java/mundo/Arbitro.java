@@ -171,7 +171,7 @@ public class Arbitro implements Serializable {
 
     @Override
     public String toString() {
-        return "mundo.Arbitro[ idArbitro=" + idArbitro + " ]";
+        return nombres +" "+ apellidos;
     }
     
 }
