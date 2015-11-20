@@ -43,7 +43,7 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListGrupoTitle_idCampeonato}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idCampeonato}"/>
+                            <h:outputText value="#{item.idCampeonato.descripcion}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{grupoController.prepareCreate}" update=":GrupoCreateForm" oncomplete="PF('GrupoCreateDialog').show()"/>

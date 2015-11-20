@@ -200,7 +200,7 @@ public class Partido implements Serializable {
 
     @Override
     public String toString() {
-        return "mundo.Partido[ idPartido=" + idPartido + " ]";
+        return "id" + idPartido;
     }
     
 }

@@ -107,7 +107,7 @@ public class Sancion implements Serializable {
 
     @Override
     public String toString() {
-        return "mundo.Sancion[ idSanciones=" + idSanciones + " ]";
+        return "id=" + idSanciones;
     }
     
 }

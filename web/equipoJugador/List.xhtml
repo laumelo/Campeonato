@@ -37,13 +37,13 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEquipoJugadorTitle_idEquipo}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idEquipo}"/>
+                            <h:outputText value="#{item.idEquipo.nombre}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListEquipoJugadorTitle_idJugador}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idJugador}"/>
+                            <h:outputText value="#{item.idJugador.nombres}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{equipoJugadorController.prepareCreate}" update=":EquipoJugadorCreateForm" oncomplete="PF('EquipoJugadorCreateDialog').show()"/>

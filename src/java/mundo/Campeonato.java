@@ -151,7 +151,7 @@ public class Campeonato implements Serializable {
 
     @Override
     public String toString() {
-        return "mundo.Campeonato[ idCampeonato=" + idCampeonato + " ]";
+        return descripcion;
     }
     
 }

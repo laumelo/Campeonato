@@ -37,19 +37,19 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListSancionTitle_idEquipoJugador}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idEquipoJugador}"/>
+                            <h:outputText value="#{item.idEquipoJugador.idCampeonatoEquipoJugador}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListSancionTitle_idPartido}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idPartido}"/>
+                            <h:outputText value="#{item.idPartido.idPartido}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListSancionTitle_idTipoSancion}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idTipoSancion}"/>
+                            <h:outputText value="#{item.idTipoSancion.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{sancionController.prepareCreate}" update=":SancionCreateForm" oncomplete="PF('SancionCreateDialog').show()"/>

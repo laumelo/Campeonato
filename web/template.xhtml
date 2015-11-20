@@ -12,33 +12,56 @@
     </h:head>
 
     <h:body>
-
+        
         <p:growl id="growl" life="3000" />
-
+    
         <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="65" header="#{bundle.AppName}">
-                <h:form id="menuForm">
-                    <p:menubar>
-                        <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
-                        <p:submenu label="#{bundle.Maintenance}">
-                            <p:menuitem value="Arbitro" outcome="/arbitro/List.xhtml" />
-                            <p:menuitem value="Campeonato" outcome="/campeonato/List.xhtml" />
-                            <p:menuitem value="Cancha" outcome="/cancha/List.xhtml" />
-                            <p:menuitem value="Equipo" outcome="/equipo/List.xhtml" />
-                            <p:menuitem value="Equipo Jugador" outcome="/equipoJugador/List.xhtml" />
-                            <p:menuitem value="Gol" outcome="/gol/List.xhtml" />
-                            <p:menuitem value="Grupo" outcome="/grupo/List.xhtml" />
-                            <p:menuitem value="Jugador" outcome="/jugador/List.xhtml" />
-                            <p:menuitem value="Partido" outcome="/partido/List.xhtml" />
-                            <p:menuitem value="Sancion" outcome="/sancion/List.xhtml" />
-                            <p:menuitem value="Tipo Campeonato" outcome="/tipoCampeonato/List.xhtml" />
-                            <p:menuitem value="Tipo Sancion" outcome="/tipoSancion/List.xhtml" />
-                        </p:submenu>
-                    </p:menubar>
+            
+            <p:layoutUnit position="north" size="220" header="#{bundle.AppName}">
+            <p:graphicImage value="img/estadio/imagen.jpg" style="margin-left: 270px" width="647" height="140"/>
+            <h:form id="menuForm">
+            <p:megaMenu  style="margin-top:20px">
+            <p:menuitem value="#{bundle.Home}" outcome="/index" icon="ui-icon-home"/>
+            <p:submenu label="Campeonato" icon="ui-icon-check">
+                <p:column>
+                <p:submenu>  
+                    <p:menuitem value="Campeonatos" outcome="/campeonato/List"/>
+                    <p:menuitem value="Canchas" outcome="/cancha/List"/>
+                    <p:menuitem value="Tipos de campeonatos" outcome="/tipoCampeonato/List"/>
+                    <p:menuitem value="Grupos" outcome="/grupo/List"/>
+                    <p:menuitem value="Arbitros" outcome="/arbitro/List"/>
+                </p:submenu>  
+                </p:column>
+            </p:submenu>
+            <p:submenu label="Equipos" icon="ui-icon-check">
+                <p:column>
+                <p:submenu>  
+                    <p:menuitem value="Equipos" outcome="/equipo/List"/>
+                    <p:menuitem value="Jugadores" outcome="/jugador/List"/>
+                </p:submenu>  
+                </p:column>
+            </p:submenu>
+            <p:submenu label="Partidos" icon="ui-icon-check">
+                <p:column>
+                <p:submenu>  
+                    <p:menuitem value="Partidos" outcome="/partido/List"/>
+                    <p:menuitem value="Goles" outcome="/gol/List"/>
+                    <p:menuitem value="Sanción" outcome="/sancion/List"/>
+                    <p:menuitem value="Tipo de sanción" outcome="/tipoSancion/List"/>
+                </p:submenu>  
+                </p:column>
+            </p:submenu>
+            <p:submenu label="Reportes" icon="ui-icon-document">
+            <p:column>
+            <p:submenu>  
+            </p:submenu>  
+            </p:column>
+        </p:submenu>
+        </p:megaMenu>
                 </h:form>
             </p:layoutUnit>
-
-            <p:layoutUnit position="south" size="60">
+            <p:graphicImage value="img/banner.jpg" style="margin-left: 270px" width="200" height="100"/>
+            <p:layoutUnit position="south" size="70">
                 <ui:insert name="footer"/>
             </p:layoutUnit>
 
@@ -46,7 +69,7 @@
                 <ui:insert name="body"/>
             </p:layoutUnit>
 
-        </p:layout>
+            </p:layout>
 
     </h:body>
 
