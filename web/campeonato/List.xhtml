@@ -59,7 +59,7 @@
                             <f:facet name="header">
                                 <h:outputText value="#{bundle.ListCampeonatoTitle_idTipoCampeonato}"/>
                             </f:facet>
-                            <h:outputText value="#{item.idTipoCampeonato}"/>
+                            <h:outputText value="#{item.idTipoCampeonato.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{campeonatoController.prepareCreate}" update=":CampeonatoCreateForm" oncomplete="PF('CampeonatoCreateDialog').show()"/>
