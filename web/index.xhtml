@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <script src='http://maps.google.com/maps/api/js?sensor=true|false' type="text/javascript"></script>
+    <h:head>
+        <title>Campeonato de Futbol</title>
+        <h:outputStylesheet name="Incio"/>
+    </h:head>
+    <h:body style="font-family: ARIAL">
+        <h1  align="center">CAMPEONATO DE FUTBOL</h1>
+        <br /> 
+        <h:form id="form">
+        <!--Es un componente que permite presentar el elemento raiz con su respectivo submenú-->
+        <p:megaMenu  style="margin-top:20px">
+        <p:submenu label="Campeonato" icon="ui-icon-check">
+            <p:column>
+            <p:submenu>  
+                <p:menuitem value="Campeonatos" outcome="/campeonato/List"/>
+                <p:menuitem value="Canchas" outcome="/cancha/List"/>
+                <p:menuitem value="Tipos de campeonatos" outcome="/tipoCampeonato/List"/>
+                <p:menuitem value="Grupos" outcome="/grupo/List"/>
+                <p:menuitem value="Arbitros" outcome="/arbitro/List"/>
+            </p:submenu>  
+            </p:column>
+        </p:submenu>
+        <p:submenu label="Equipos" icon="ui-icon-check">
+            <p:column>
+            <p:submenu>  
+                <p:menuitem value="Equipos" outcome="/equipo/List"/>
+                <p:menuitem value="Jugadores" outcome="/jugador/List"/>
+            </p:submenu>  
+            </p:column>
+        </p:submenu>
+        <p:submenu label="Partidos" icon="ui-icon-check">
+            <p:column>
+            <p:submenu>  
+                <p:menuitem value="Partidos" outcome="/partido/List"/>
+                <p:menuitem value="Goles" outcome="/gol/List"/>
+                <p:menuitem value="Sanción" outcome="/sancion/List"/>
+                <p:menuitem value="Tipo de sanción" outcome="/tipoSancion/List"/>
+            </p:submenu>  
+            </p:column>
+        </p:submenu>
+        <p:submenu label="Reportes" icon="ui-icon-document">
+            <p:column>
+            <p:submenu>  
+            </p:submenu>  
+            </p:column>
+        </p:submenu>
+        </p:megaMenu>
+        
+        <br />   
+        <!--Permite presentar imagenes almacenadas-->
+        <p:graphicImage value="img/estadio/futbol.jpg" style="margin-left: 270px" width="800" height="600"/>
+        <br />      
+                
+        
+        <br />      
+        <h3 style="margin-top:0">Jugadores Destacados</h3>
+        <!--Es un componente contenedor con paneles apilados verticalmente-->
+        <p:accordionPanel>
+            <p:tab title="James Rodríguez">
+                <h:panelGrid columns="2" cellpadding="12">
+                    <img src='img/jugador/jugador1.jpg'/>
+                    <h:outputText
+                        value="James David Rodríguez Rubio (Cúcuta, Norte de Santander, Colombia, 12 de julio de 1991), mejor conocido como James Rodríguez o simplemente como James, es un futbolista colombiano que juega como centrocampista en el Real Madrid Club de Fútbol de la Primera División de España.
+                        Recibió en 2009, 2012 y 2014 el premio de jugador revelación en la Primera División de Argentina y en la Primeira Liga, ya que el 13 de diciembre de 2009 se consagró campeón del Torneo Apertura con el Banfield a la edad de 18 años, siendo el extranjero más joven en salir campeón en Argentina, logrando un hecho inédito y nunca antes ocurrido en la historia del club del sur de Buenos Aires.
+                        El 18 de mayo de 2011, el FC Porto derrotó en la final de la UEFA Europa League al Sporting Braga y logró coronarse Campeón del certamen, con su compatriota y compañero de club Radamel Falcao. James participó en los minutos finales de ese encuentro y fue pieza importante en la corrida del 'Equipo Dragón' en el transcurso del torneo continental." />
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Radamel Falcao García Zárate">
+                <h:panelGrid columns="2" cellpadding="10">
+                    <img src='img/jugador/jugador2.jpg'/>
+                    <h:outputText value="Radamel Falcao García Zárate (Santa Marta, Magdalena, Colombia, 10 de febrero de 1986), conocido simplemente como Falcao, es un futbolista colombiano que juega de delantero en el Chelsea F. C. de la Premier League. Debutó profesionalmente en el extinto club colombiano Lanceros Boyacá.5 Es jugador de la Selección de Colombia, donde actualmente es el capitán y goleador histórico con 25 goles.
+                    Es el jugador que más goles ha anotado en una sola temporada de un torneo europeo. Tal récord lo logró con el FC Porto en la Liga Europea de la UEFA durante la temporada 2010-2011.6 7 8 En julio de 2011 fue considerado el quinto mejor futbolista en Europa (solo por detrás de Lionel Messi, Cristiano Ronaldo, Xavi Hernández y Andrés Iniesta) mediante una votación realizada por 53 periodistas deportivos de las federaciones que hacen parte de la UEFA." />
+                </h:panelGrid>
+            </p:tab>
+            <p:tab title="Lionel Messi">
+                <h:panelGrid columns="2" cellpadding="10">
+                    <img src='img/jugador/jugador3.jpg'/>
+                    <h:outputText value="Lionel Andrés Messi Cuccittini (Rosario, 24 de junio de 1987), conocido como Leo Messi,13 es un futbolista argentino.11 Juega de delantero en el F. C. Barcelona de la Primera División de España y en la selección de Argentina.
+                    Desde 2009 es considerado por diversos organismos deportivos,14 por varios futbolistas,15 16 por gran cantidad de exjugadores legendarios,17 18 19 20 21 entrenadores,22 23 deportistas de élite24 como el mejor jugador del mundo y para algunos deportistas, jugadores y técnicos, como el mejor futbolista de la historia.25 En 2013, el presidente de la FIFA, Joseph Blatter, también lo destacó como el mejor del mundo.26 A fines de 2011 fue seleccionado dentro de las 32 personalidades más populares del año por la revista Time, postulándose como candidato a la «persona del año», siendo el único deportista nominado en dicha lista. Recibió el premio al Mejor Jugador del Mundo de la FIFA y el Balón de Oro en 2009. Además es el primer ganador del FIFA Balón de Oro que desde 2010 engloba ambos premios, volviendo a ganar las ediciones de 2011 y 2012" />
+                </h:panelGrid>
+            </p:tab>
+        </p:accordionPanel>
+        
+        <br/>
+        <h3 style="margin-top: 0">Estadios</h3>
+        <!--Es un componente de superposición modal para mostrar imágenes , contenidos en línea y iframes-->
+        <p:lightBox styleClass="imagebox" id="lighbox1">  
+            <h:outputLink value="img/estadio/estadio1.JPG" title="Estadio 1">  
+                <h:graphicImage value="img/estadio/estadio1.JPG" id="estadio1" style="height: 230px; width: 260px" />  
+            </h:outputLink>
+
+            <h:outputLink value="img/estadio/estadio2.JPG" title="Estadio 2">  
+                <h:graphicImage value="img/estadio/estadio2.JPG" id="estadio2" style="height: 230px; width: 260px" />   
+            </h:outputLink>
+
+            <h:outputLink value="img/estadio/estadio3.JPG" title="Estadio 3">  
+                <h:graphicImage value="img/estadio/estadio3.JPG" id="estadio3" style="height: 230px; width: 260px" />  
+            </h:outputLink>
+
+            <h:outputLink value="img/estadio/estadio4.JPG" title="Estadio 4">  
+                <h:graphicImage value="img/estadio/estadio4.JPG" id="estadio4" style="height: 230px; width: 260px" />   
+            </h:outputLink>
+            
+            <h:outputLink value="img/estadio/estadio5.JPG" title="Estadio 5">  
+                <h:graphicImage value="img/estadio/estadio5.JPG" id="estadio5" style="height: 230px; width: 260px" />   
+            </h:outputLink>
+        </p:lightBox>        
+        
+        <br/>
+        <h3 style="margin-top:0">Próximos partidos:</h3>
+        
+        <p:outputLabel for="pais" value="País:" />
+        <!--se utiliza para elegir un único elemento de una lista-->
+        <p:selectOneMenu id="pais"  style="width:175px">
+            <f:selectItem itemLabel="Seleccione uno" itemValue="" />
+            <f:selectItem itemLabel="Colombia" itemValue="Colombia" />
+            <f:selectItem itemLabel="Chile" itemValue="Chile" />
+            <f:selectItem itemLabel="Ecuador" itemValue="Ecuador" />
+            <f:selectItem itemLabel="Brasil" itemValue="Brasil" />
+            <f:selectItem itemLabel="Mexico" itemValue="Mexico" />
+            <f:selectItem itemLabel="Argentina" itemValue="Argentina" />
+        </p:selectOneMenu>
+        <br/>
+        <br/>
+        <!--Es un componente que permite recoger la fecha-->
+        <p:calendar id="popup"  mode="popup" />
+        <br/>
+        <!--Es                           -->
+        <p:commandButton value="Buscar" id='buscar' icon="ui-icon-search" />
+        <br/>
+        <br/>
+        Consulte como llegar
+        <!--Permite crear un mapa con sus respectivos atributos -->
+        <p:gmap center="1.198354, -77.277776" zoom="15" type="HYBRID" style="width:100%;height:400px" />
+        <br/>
+        <br/>
+        Registrese para recibir información actualizada sobre los campeonatos:
+        <br/>
+        <h3 style="margin-top:0">Registro:</h3>
+        <!-- Es un asistente de flujo permite la creación de múltiples pasos en una sola página. 
+        Se muestra el siguiente paso si el paso actual pasa las validaciones . -->
+        <p:wizard >
+        <p:tab id="personal" title="Datos personales">
+            <p:panel header="Datos">
+                <p:messages />
+                <h:panelGrid columns="2" columnClasses="label, value">
+                    <h:outputText value="Nombres: *" />
+                    <p:inputText required="true" label="Nombres"/>
+                    <h:outputText value="Apellidos: *" />
+                    <p:inputText required="true" label="Apellidos"/>
+                    <h:outputText value="Edad: " />    
+                    <p:inputText />
+                </h:panelGrid>
+            </p:panel>
+        </p:tab>
+        <p:tab id="contacto" title="Contacto">
+            <p:panel header="Detalles de contacto">
+                <p:messages />
+                <h:panelGrid columns="2" columnClasses="label, value">
+                    <h:outputText value="Dirección: " /> 
+                    <p:inputText />
+                    <h:outputText value="Código postal: " />
+                    <p:inputText />
+                    <h:outputText value="Ciudad: " />  
+                    <p:inputText />
+                </h:panelGrid>
+                <p:commandButton value="Registrar" id='registro' icon="ui-icon-disk" />
+            </p:panel>     
+        </p:tab>
+        </p:wizard>
+        <br/> 
+        
+              
+        <br/> 
+        <h3 style="margin-top:0">Fecha y hora:</h3>
+        <!--Permite mostrar el reloj y fecha en vivo-->
+        <p:clock />
+               
+        
+    </h:form>  
+    </h:body>
+</html>
+
